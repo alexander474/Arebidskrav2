@@ -39,9 +39,9 @@ public class Country {
 
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append(getCountryName());
-        sb.append(getCapital());
-        sb.append(getImageFilePath());
+        sb.append("\nCountry Name: ["+getCountryName()+"]\n");
+        sb.append("Country Capital: ["+getCapital()+"]\n");
+        sb.append("Country Image FilePath: ["+getImageFilePath()+"]\n");
         return sb.toString();
     }
 }

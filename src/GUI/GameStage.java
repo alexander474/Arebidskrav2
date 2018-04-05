@@ -30,6 +30,7 @@ public class GameStage {
     static CountryHandler countryHandler = new CountryHandler();
 
     public static void GameWindow(Stage gameStage){
+        addExampleData();
         BorderPane borderPane = new BorderPane();
         GridPane gridPaneTop = new GridPane();
         ImageView imageView = new ImageView();
@@ -80,13 +81,14 @@ public class GameStage {
         //src/Images/norway.png
         File file = new File("src/Images/"+fileName);
         System.out.println("src/Images/"+fileName);
-        Image countryImage = new Image(file.toURI().toString());
-        imageView.setImage(countryImage);
+
+        imageView.setImage(new Image(file.toURI().toString()));
         imageView.setFitHeight(400);
         imageView.setFitWidth(600);
 
         //ButtonActions
         answerBTN.setOnAction(e->{
+            getAllQuestions();
             checkAnswer(answerField);
             System.out.println("[AnswerButton pressed]");
             System.out.println("Answer is currently ["+answer+"]");
@@ -99,6 +101,7 @@ public class GameStage {
             else{
                 System.out.println("[Answer is not correct]");
             }
+            answer = false;
         });
 
 
@@ -109,15 +112,14 @@ public class GameStage {
 
     }
 
-    public void getAllQuestions(){
+    public static void getAllQuestions(){
         List<Country> countries =  countryHandler.getAllCountries();
         for(int i=0; i<countries.size(); i++){
-
+            System.out.println(countries.toString());
         }
     }
 
     public static void getQuestion(Text countryName){
-        countryHandler.addCountry(new Country("norway", "Oslo", "norway.png"));
         Country c = countryHandler.getCountry("norway");
         countryName.setText(c.getCountryName().toString());
         fileName = c.getImageFilePath().toString();
@@ -127,10 +129,17 @@ public class GameStage {
         Country c = countryHandler.getCountry("norway");
         System.out.println("Answer: "+answerField.getText().toUpperCase());
         System.out.println("Capital answer: "+c.getCapital().toUpperCase());
+
         if(answerField.getText().toUpperCase().equals(c.getCapital().toUpperCase())){
             System.out.println("[Setting answer to true]");
             answer = true;
         }
         return answer;
+    }
+
+    public static void addExampleData(){
+        countryHandler.addCountry(new Country("norway", "Oslo", "norway.png"));
+        countryHandler.addCountry(new Country("sweden", "stockholm", "sweden.png"));
+        countryHandler.addCountry(new Country("denmark", "København", "denmark.png"));
     }
 }
