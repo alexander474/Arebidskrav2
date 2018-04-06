@@ -5,10 +5,12 @@ import java.util.List;
 
 public class CountryHandler {
     List<Country> countries;
+    JsonReader jsonReader = new JsonReader();
 
 
     public CountryHandler(){
-       countries = new ArrayList<>();
+       //countries = new ArrayList<>();
+       countries = jsonReader.readQuestions("src/Quiz/Questions.json");
     }
 
     public void addCountry(Country c){

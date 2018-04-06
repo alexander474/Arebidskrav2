@@ -5,11 +5,13 @@ import java.io.FileInputStream;
 public class Country {
     String countryName;
     String capital;
+    String continent;
     String imageFilePath;
 
-    public Country(String countryName, String capital,String imageFilePath){
+    public Country(String countryName, String capital, String continent,String imageFilePath){
         setCountryName(countryName);
         setImageFilePath(imageFilePath);
+        setContinent(continent);
         setCapital(capital);
     }
 
@@ -18,7 +20,7 @@ public class Country {
     }
 
     public void setCountryName(String countryName) {
-        this.countryName = countryName;
+        this.countryName = countryName.toUpperCase();
     }
 
     public String getCapital() {
@@ -27,6 +29,14 @@ public class Country {
 
     public void setCapital(String capital) {
         this.capital = capital;
+    }
+
+    public String getContinent() {
+        return continent;
+    }
+
+    public void setContinent(String continent) {
+        this.continent = continent;
     }
 
     public String getImageFilePath() {
@@ -41,6 +51,7 @@ public class Country {
         StringBuilder sb = new StringBuilder();
         sb.append("\nCountry Name: ["+getCountryName()+"]\n");
         sb.append("Country Capital: ["+getCapital()+"]\n");
+        sb.append("Continent: ["+getContinent()+"]\n");
         sb.append("Country Image FilePath: ["+getImageFilePath()+"]\n");
         return sb.toString();
     }

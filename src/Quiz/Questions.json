@@ -1,0 +1,21 @@
+[
+  {
+    "countryName": "norway",
+    "capital": "oslo",
+    "continent": "europe",
+    "imageFilePath": "norway.png"
+  },
+  {
+    "countryName": "sweden",
+    "capital": "stockholm",
+    "continent": "europe",
+    "imageFilePath": "sweden.png"
+  },
+  {
+    "countryName": "denmark",
+    "capital": "københavn",
+    "continent": "europe",
+    "imageFilePath": "denmark.png"
+  }
+
+]

@@ -12,13 +12,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.util.List;
 
 
@@ -27,14 +25,22 @@ public class GameStage {
     static String fileName = "";
     static Boolean answer = false;
     static int score = 0;
+    static int questionNumber = 0;
     static CountryHandler countryHandler = new CountryHandler();
 
     public static void GameWindow(Stage gameStage){
-        addExampleData();
         BorderPane borderPane = new BorderPane();
         GridPane gridPaneTop = new GridPane();
         ImageView imageView = new ImageView();
         GridPane gridPaneBottom = new GridPane();
+
+        //stageoptions
+        gameStage.setTitle("Quiz");
+        Scene gameScene = new Scene(borderPane, 1000,1000);
+        gameStage.setScene(gameScene);
+
+        //css
+        gameScene.getStylesheets().add("GUI/Main.css");
 
         //borderPane
         borderPane.setCenter(imageView);
@@ -51,25 +57,33 @@ public class GameStage {
 
         //gridPaneBottom
         gridPaneBottom.setAlignment(Pos.TOP_CENTER);
-        gridPaneBottom.setPadding(new Insets(25,25,25,25));
+        gridPaneBottom.setPadding(new Insets(25,50,25,25));
         gridPaneBottom.setHgap(10);
         gridPaneBottom.setVgap(10);
-        gridPaneBottom.setPrefSize(400,400);
+        gridPaneBottom.setPrefSize(300,300);
 
         Text countryName = new Text("CountryName");
         countryName.setFont(new Font(30));
 
+        Text currentQuestionNumberText = new Text("Question nr. "+(questionNumber+1));
+        currentQuestionNumberText.setFont(new Font(30));
+
         Label scoreLabel = new Label("Score");
         scoreLabel.setFont(new Font(20));
-        scoreLabel.setText(Integer.toString(score)+" / "+countryHandler.getAllCountries().size());
+        scoreLabel.setPrefWidth(400);
+        scoreLabel.setWrapText(true);
+        scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+countryHandler.getAllCountries().size());
 
         TextField answerField = new TextField();
+        answerField.setMaxWidth(200);
         Button answerBTN = new Button("Answer");
         answerBTN.setDefaultButton(true);
-        gridPaneBottom.add(countryName, 0,0);
-        gridPaneBottom.add(answerField,0,1,3,1);
-        gridPaneBottom.add(answerBTN,4,1,1,1);
-        gridPaneBottom.add(scoreLabel,0,2,1,1);
+
+        gridPaneBottom.add(countryName, 0,0,1,1);
+        gridPaneBottom.add(currentQuestionNumberText,2,0,1,1);
+        gridPaneBottom.add(answerField,0,1,1,1);
+        gridPaneBottom.add(answerBTN,1,1,1,1);
+        gridPaneBottom.add(scoreLabel,0,2,1,3);
 
         //questionText
         Text questionText = new Text("What is the capital in?");
@@ -77,56 +91,62 @@ public class GameStage {
         gridPaneTop.add(questionText,0,0);
 
         //imageView
-        getQuestion(countryName);
-        //src/Images/norway.png
-        File file = new File("src/Images/"+fileName);
+        getCurrentQuestion(countryName, imageView);
         System.out.println("src/Images/"+fileName);
 
-        imageView.setImage(new Image(file.toURI().toString()));
+        //imageView.setImage(new Image(imageFilePath.toURI().toString()));
         imageView.setFitHeight(400);
         imageView.setFitWidth(600);
 
         //ButtonActions
         answerBTN.setOnAction(e->{
-            getAllQuestions();
-            checkAnswer(answerField);
-            System.out.println("[AnswerButton pressed]");
+            checkAnswer(answerField, countryName);
+            System.out.println("\n[AnswerButton pressed]");
             System.out.println("Answer is currently ["+answer+"]");
             if(answer){
                 score = score +1;
-                scoreLabel.setText(Integer.toString(score)+" / "+countryHandler.getAllCountries().size());
-                System.out.println("[Answer is correct]");
+                scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+countryHandler.getAllCountries().size());
+                System.out.println("[Answer is correct]\n");
 
             }
             else{
-                System.out.println("[Answer is not correct]");
+                System.out.println("\n[Answer is not correct]\n");
             }
+            questionNumber = questionNumber +1;
+            if(questionNumber <= countryHandler.getAllCountries().size()-1){
+                getCurrentQuestion(countryName, imageView);
+            }
+            else{
+                answerBTN.setDisable(true);
+                scoreLabel.setText("Thank you for playing, you managed to get " + Integer.toString(score)+" of "+countryHandler.getAllCountries().size()+" questions right");
+            }
+            currentQuestionNumberText.setText("Question nr. "+(questionNumber+1));
             answer = false;
+            answerField.setText("");
+            System.out.println("Quest num: "+questionNumber);
         });
 
 
-        gameStage.setTitle("Quiz");
-        gameStage.setScene(new Scene(borderPane, 1000, 1000));
         gameStage.show();
 
 
     }
 
-    public static void getAllQuestions(){
-        List<Country> countries =  countryHandler.getAllCountries();
-        for(int i=0; i<countries.size(); i++){
-            System.out.println(countries.toString());
-        }
+    public static void getCurrentQuestion(Text countryName, ImageView currentImage){
+        Country currentCountry = countryHandler.getAllCountries().get(questionNumber);
+        countryName.setText(currentCountry.getCountryName());
+        fileName = currentCountry.getImageFilePath();
+        System.out.println("Current country image name: "+currentCountry.getImageFilePath());
+
+        File imageFilePath = new File("src/Images/"+fileName);
+        System.out.println("src/Images/"+fileName);
+        currentImage.setImage(new Image(imageFilePath.toURI().toString()));
     }
 
-    public static void getQuestion(Text countryName){
-        Country c = countryHandler.getCountry("norway");
-        countryName.setText(c.getCountryName().toString());
-        fileName = c.getImageFilePath().toString();
-    }
+    public static Boolean checkAnswer(TextField answerField, Text countryName){
+        Country c = countryHandler.getCountry(countryName.getText().toUpperCase());
 
-    public static Boolean checkAnswer(TextField answerField){
-        Country c = countryHandler.getCountry("norway");
+        System.out.println("CountryName: "+countryName.getText().toUpperCase());
         System.out.println("Answer: "+answerField.getText().toUpperCase());
         System.out.println("Capital answer: "+c.getCapital().toUpperCase());
 
@@ -135,11 +155,5 @@ public class GameStage {
             answer = true;
         }
         return answer;
-    }
-
-    public static void addExampleData(){
-        countryHandler.addCountry(new Country("norway", "Oslo", "norway.png"));
-        countryHandler.addCountry(new Country("sweden", "stockholm", "sweden.png"));
-        countryHandler.addCountry(new Country("denmark", "København", "denmark.png"));
     }
 }
