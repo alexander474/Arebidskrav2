@@ -14,6 +14,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -55,6 +56,32 @@ public class GameStage {
         gridPaneTop.setVgap(10);
         gridPaneTop.setPrefHeight(200);
 
+        //CountryNameDisplay
+        Text countryName = new Text("CountryName");
+        countryName.setFont(new Font(30));
+
+        //NumberTrackerText
+        Text currentQuestionNumberText = new Text("Question: "+(questionNumber+1));
+        currentQuestionNumberText.setFont(new Font(30));
+
+        //ScoreLabel
+        Label scoreLabel = new Label("Score");
+        scoreLabel.setFont(new Font(20));
+        scoreLabel.setPrefWidth(300);
+        scoreLabel.setWrapText(true);
+        scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+countryHandler.getAllCountries().size());
+
+        //AnswerField
+        TextField answerField = new TextField();
+        answerField.getStyleClass().add("answerField");
+
+
+        //Buttons
+        Button answerBTN = new Button("Answer");
+        answerBTN.setDefaultButton(true);
+        answerBTN.setFont(new Font(20));
+        answerBTN.setPrefWidth(300);
+
         //gridPaneBottom
         gridPaneBottom.setAlignment(Pos.TOP_CENTER);
         gridPaneBottom.setPadding(new Insets(25,50,25,25));
@@ -62,28 +89,11 @@ public class GameStage {
         gridPaneBottom.setVgap(10);
         gridPaneBottom.setPrefSize(300,300);
 
-        Text countryName = new Text("CountryName");
-        countryName.setFont(new Font(30));
-
-        Text currentQuestionNumberText = new Text("Question nr. "+(questionNumber+1));
-        currentQuestionNumberText.setFont(new Font(30));
-
-        Label scoreLabel = new Label("Score");
-        scoreLabel.setFont(new Font(20));
-        scoreLabel.setPrefWidth(400);
-        scoreLabel.setWrapText(true);
-        scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+countryHandler.getAllCountries().size());
-
-        TextField answerField = new TextField();
-        answerField.setMaxWidth(200);
-        Button answerBTN = new Button("Answer");
-        answerBTN.setDefaultButton(true);
-
         gridPaneBottom.add(countryName, 0,0,1,1);
         gridPaneBottom.add(currentQuestionNumberText,2,0,1,1);
-        gridPaneBottom.add(answerField,0,1,1,1);
-        gridPaneBottom.add(answerBTN,1,1,1,1);
-        gridPaneBottom.add(scoreLabel,0,2,1,3);
+        gridPaneBottom.add(answerField,0,1,2,1);
+        gridPaneBottom.add(answerBTN,2,1,1,1);
+        gridPaneBottom.add(scoreLabel,0,2,2,3);
 
         //questionText
         Text questionText = new Text("What is the capital in?");
@@ -115,12 +125,12 @@ public class GameStage {
             questionNumber = questionNumber +1;
             if(questionNumber <= countryHandler.getAllCountries().size()-1){
                 getCurrentQuestion(countryName, imageView);
+                currentQuestionNumberText.setText("Question: "+(questionNumber+1));
             }
             else{
                 answerBTN.setDisable(true);
                 scoreLabel.setText("Thank you for playing, you managed to get " + Integer.toString(score)+" of "+countryHandler.getAllCountries().size()+" questions right");
             }
-            currentQuestionNumberText.setText("Question nr. "+(questionNumber+1));
             answer = false;
             answerField.setText("");
             System.out.println("Quest num: "+questionNumber);

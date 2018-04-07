@@ -1,3 +1,7 @@
 .root{
     -fx-background-color: lightgrey;
 }
+
+.answerField{
+    -fx-max-width: 300;
+}
