@@ -73,7 +73,9 @@ public class GameStage {
 
         //AnswerField
         TextField answerField = new TextField();
-        answerField.getStyleClass().add("answerField");
+        answerField.setPrefWidth(300);
+        answerField.setFont(new Font(20));
+
 
 
         //Buttons
