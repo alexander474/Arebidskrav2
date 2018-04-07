@@ -15,6 +15,13 @@ public class Country {
         setCapital(capital);
     }
 
+    public Country(){
+        setCountryName("Unknown");
+        setImageFilePath("Unknown");
+        setContinent("Unknown");
+        setCapital("Unknown");
+    }
+
     public String getCountryName() {
         return countryName;
     }
