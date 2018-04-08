@@ -19,8 +19,11 @@ public class MenuScene {
 
         //stageoptions
         mainStage.setTitle("Quiz");
-        Scene gameScene = new Scene(borderPane, 1000,1000);
-        mainStage.setScene(gameScene);
+        Scene menuScene = new Scene(borderPane, 1000,1000);
+        mainStage.setScene(menuScene);
+
+        //css
+        menuScene.getStylesheets().add("GUI/Main.css");
 
         /**
          * BorderPane
@@ -46,6 +49,7 @@ public class MenuScene {
 
         AllCountries.setOnAction(e->{
             GameScene.GameWindow(mainStage);
+
         });
 
 

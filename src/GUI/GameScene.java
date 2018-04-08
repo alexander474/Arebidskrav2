@@ -20,7 +20,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.io.File;
 
-
 public class GameScene {
 
     static String fileName = "";
@@ -28,18 +27,8 @@ public class GameScene {
     static int score = 0;
     static int questionNumber = 0;
     static CountryHandler countryHandler = new CountryHandler();
-    public enum gameMode{
-        Allcountries,
-        Europe,
-        Asia,
-        Oceania,
-        NorthAmerica,
-        SouthAmerica
-    }
 
-    public static void GameWindow(Stage mainStage, String gameMode){
-        
-
+    public static void GameWindow(Stage mainStage){
         BorderPane borderPane = new BorderPane();
         GridPane gridPaneTop = new GridPane();
         GridPane gridPaneTopText = new GridPane();
@@ -205,7 +194,9 @@ public class GameScene {
     }
 
     public static void getCurrentQuestion(Label countryName, Label continentName, ImageView currentImage){
+
         Country currentCountry = countryHandler.getAllCountries().get(questionNumber);
+
         countryName.setText(currentCountry.getCountryName());
         continentName.setText("("+currentCountry.getContinent()+")");
         fileName = currentCountry.getImageFilePath();
@@ -217,13 +208,13 @@ public class GameScene {
     }
 
     public static Boolean checkAnswer(TextField answerField, Label countryName){
-        Country c = countryHandler.getCountry(countryName.getText().toUpperCase());
+        Country currentCountry = countryHandler.getCountry(countryName.getText().toUpperCase());
 
         System.out.println("CountryName: "+countryName.getText().toUpperCase());
         System.out.println("Answer: "+answerField.getText().toUpperCase());
-        System.out.println("Capital answer: "+c.getCapital().toUpperCase());
+        System.out.println("Capital answer: "+currentCountry.getCapital().toUpperCase());
 
-        if(answerField.getText().toUpperCase().equals(c.getCapital().toUpperCase())){
+        if(answerField.getText().toUpperCase().equals(currentCountry.getCapital().toUpperCase())){
             System.out.println("[Setting answer to true]");
             answer = true;
         }
