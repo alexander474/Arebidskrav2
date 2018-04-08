@@ -68,7 +68,7 @@
   {
     "countryName": "Australia",
     "capital": "Canberra",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Australia.png"
   },
   {
@@ -86,7 +86,7 @@
   {
     "countryName": "Bahamas",
     "capital": "Nassau",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Bahamas.png"
   },
   {
@@ -104,7 +104,7 @@
   {
     "countryName": "Barbados",
     "capital": "Bridgetown",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Barbados.png"
   },
   {
@@ -122,7 +122,7 @@
   {
     "countryName": "Belize",
     "capital": "Belmopan",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Belize.png"
   },
   {
@@ -134,7 +134,7 @@
   {
     "countryName": "Bermuda",
     "capital": "Hamilton",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Bermuda.png"
   },
   {
@@ -212,7 +212,7 @@
   {
     "countryName": "Canada",
     "capital": "Ottawa",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Canada.png"
   },
   {
@@ -278,7 +278,7 @@
   {
     "countryName": "Costa_Rica",
     "capital": "San Jose",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Costa_Rica.png"
   },
   {
@@ -290,7 +290,7 @@
   {
     "countryName": "Cuba",
     "capital": "Havana",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Cuba.png"
   },
   {
@@ -338,13 +338,13 @@
   {
     "countryName": "Dominica",
     "capital": "Roseau",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Dominica.png"
   },
   {
     "countryName": "Dominican_Republic",
     "capital": "Santo Domingo",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Dominican_Republic.png"
   },
   {
@@ -362,7 +362,7 @@
   {
     "countryName": "El_Salvador",
     "capital": "San Salvador",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "El_Salvador.png"
   },
   {
@@ -404,7 +404,7 @@
   {
     "countryName": "Fiji",
     "capital": "Suva",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Fiji.png"
   },
   {
@@ -476,7 +476,7 @@
   {
     "countryName": "Grenada",
     "capital": "Saint Georges",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Grenada.png"
   },
   {
@@ -488,7 +488,7 @@
   {
     "countryName": "Guatemala",
     "capital": "Guatemala City",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Guatemala.png"
   },
   {
@@ -512,13 +512,13 @@
   {
     "countryName": "Haiti",
     "capital": "Port au Prince",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Haiti.png"
   },
   {
     "countryName": "Honduras",
     "capital": "Tegucigalpa",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Honduras.png"
   },
   {
@@ -578,7 +578,7 @@
   {
     "countryName": "Jamaica",
     "capital": "Kingston",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Jamaica.png"
   },
   {
@@ -608,7 +608,7 @@
   {
     "countryName": "Kiribati",
     "capital": "Tarawa",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Kiribati.png"
   },
   {
@@ -722,7 +722,7 @@
   {
     "countryName": "Marshall_Islands",
     "capital": "Majuro",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Marshall_Islands.png"
   },
   {
@@ -746,13 +746,13 @@
   {
     "countryName": "Mexico",
     "capital": "Mexico City",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Mexico.png"
   },
   {
     "countryName": "Micronesia",
     "capital": "Palikir",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Micronesia.png"
   },
   {
@@ -806,7 +806,7 @@
   {
     "countryName": "Nauru",
     "capital": "Yaren District",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Nauru.png"
   },
   {
@@ -830,13 +830,13 @@
   {
     "countryName": "New_Zealand",
     "capital": "Wellington",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "New_Zealand.png"
   },
   {
     "countryName": "Nicaragua",
     "capital": "Managua",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Nicaragua.png"
   },
   {
@@ -890,19 +890,19 @@
   {
     "countryName": "Palau",
     "capital": "Ngerulmud",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Palau.png"
   },
   {
     "countryName": "Panama",
     "capital": "Panama City",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Panama.png"
   },
   {
     "countryName": "Papua_New_Guinea",
     "capital": "Port Moresby",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Papua_New_Guinea.png"
   },
   {
@@ -980,13 +980,13 @@
   {
     "countryName": "Saint_Kitts_and_Nevis",
     "capital": "Basseterre",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Saint_Kitts_and_Nevis.png"
   },
   {
     "countryName": "Saint_Lucia",
     "capital": "Castries",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Saint_Lucia.png"
   },
   {
@@ -998,13 +998,13 @@
   {
     "countryName": "Saint_Vicent_and_the_Grenadines",
     "capital": "Kingstown",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Saint_Vicent_and_the_Grenadines.png"
   },
   {
     "countryName": "Samoa",
     "capital": "Apia",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Samoa.png"
   },
   {
@@ -1070,7 +1070,7 @@
   {
     "countryName": "Soloman_Islands",
     "capital": "Honiara",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Soloman_Islands.png"
   },
   {
@@ -1178,13 +1178,13 @@
   {
     "countryName": "Tonga",
     "capital": "Nuku alofa",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Tonga.png"
   },
   {
     "countryName": "Trinidad_and_Tobago",
     "capital": "Port of Spain",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Trinidad_and_Tobago.png"
   },
   {
@@ -1214,7 +1214,7 @@
   {
     "countryName": "Tuvalu",
     "capital": "Funafuti",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Tuvalu.png"
   },
   {
@@ -1242,9 +1242,9 @@
     "imageFilePath": "United_Kingdom.png"
   },
   {
-    "countryName": "United_States_of_America",
+    "countryName": "USA (United_States_of_America)",
     "capital": "Washington",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "United_States_of_America.png"
   },
   {
@@ -1262,7 +1262,7 @@
   {
     "countryName": "Vanuatu",
     "capital": "Port Vila",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Vanuatu.png"
   },
   {

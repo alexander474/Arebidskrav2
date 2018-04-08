@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Quiz/Country.java" afterPath="$PROJECT_DIR$/src/Quiz/Country.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/GUI/MenuScene.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/Arbeidskrav2/GUI/GameStage.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Arbeidskrav2/GUI/Main.class" afterPath="$PROJECT_DIR$/out/production/Arbeidskrav2/GUI/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Arbeidskrav2/GUI/Main.css" afterPath="$PROJECT_DIR$/out/production/Arbeidskrav2/GUI/Main.css" />
+      <change beforePath="$PROJECT_DIR$/out/production/Arbeidskrav2/Quiz/Country.class" afterPath="$PROJECT_DIR$/out/production/Arbeidskrav2/Quiz/Country.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Arbeidskrav2/Quiz/Questions.json" afterPath="$PROJECT_DIR$/out/production/Arbeidskrav2/Quiz/Questions.json" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GameStage.java" afterPath="$PROJECT_DIR$/src/GUI/GameScene.java" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Main.css" afterPath="$PROJECT_DIR$/src/GUI/Main.css" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Main.java" afterPath="$PROJECT_DIR$/src/GUI/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/Quiz/Questions.json" afterPath="$PROJECT_DIR$/src/Quiz/Questions.json" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -69,8 +78,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="49" />
+            <state relative-caret-position="272">
+              <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,11 +87,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameStage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/GameStage.java">
+      <file leaf-file-name="GameScene.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/GameScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="76" column="39" lean-forward="false" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+            <state relative-caret-position="680">
+              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuScene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/MenuScene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1190">
+              <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,8 +112,8 @@
       <file leaf-file-name="Main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Questions.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Questions.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Quiz/Questions.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1347">
-              <caret line="1276" column="31" lean-forward="false" selection-start-line="1276" selection-start-column="31" selection-end-line="1276" selection-end-column="31" />
+            <state relative-caret-position="1282">
+              <caret line="1246" column="31" lean-forward="false" selection-start-line="1246" selection-start-column="31" selection-end-line="1246" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -194,14 +213,16 @@
         <option value="$PROJECT_DIR$/src/GUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/Quiz/Categories.java" />
         <option value="$PROJECT_DIR$/src/GUI/GameWindow.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Main.java" />
         <option value="$PROJECT_DIR$/src/Main.css" />
         <option value="$PROJECT_DIR$/src/Quiz/CountryHandler.java" />
         <option value="$PROJECT_DIR$/src/Quiz/JsonReader.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Main.css" />
-        <option value="$PROJECT_DIR$/src/GUI/GameStage.java" />
         <option value="$PROJECT_DIR$/src/Quiz/Country.java" />
         <option value="$PROJECT_DIR$/src/Quiz/Questions.json" />
+        <option value="$PROJECT_DIR$/src/GUI/GameStage.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Main.css" />
+        <option value="$PROJECT_DIR$/src/GUI/MenuScene.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Main.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GameScene.java" />
       </list>
     </option>
   </component>
@@ -212,8 +233,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="1969" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="98" />
     <option name="y" value="42" />
     <option name="width" value="1871" />
     <option name="height" value="2118" />
@@ -256,12 +277,6 @@
               <item name="Arbeidskrav2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Arbeidskrav2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Arbeidskrav2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -440,15 +455,15 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1522932086420" duration="17539000" />
       <workItem from="1523011902314" duration="15025000" />
-      <workItem from="1523130511283" duration="12155000" />
+      <workItem from="1523130511283" duration="23786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46021000" />
+    <option name="totallyTimeSpent" value="57652000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1969" y="42" width="1871" height="2118" extended-state="4" />
+    <frame x="98" y="42" width="3742" height="2118" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -464,7 +479,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22340994" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11170497" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -580,13 +595,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GameStage.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/GameScene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3570">
           <caret line="122" column="79" lean-forward="false" selection-start-line="122" selection-start-column="79" selection-end-line="122" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -647,13 +660,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GameStage.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/GameScene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2210">
           <caret line="84" column="63" lean-forward="true" selection-start-line="84" selection-start-column="63" selection-end-line="84" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -681,16 +692,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -738,6 +740,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/Questions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1282">
+          <caret line="1246" column="31" lean-forward="false" selection-start-line="1246" selection-start-column="31" selection-end-line="1246" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/MenuStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quiz/JsonReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
@@ -750,26 +768,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GameStage.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/MenuScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="76" column="39" lean-forward="false" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        <state relative-caret-position="1190">
+          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/Questions.json">
+    <entry file="file://$PROJECT_DIR$/src/GUI/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1347">
-          <caret line="1276" column="31" lean-forward="false" selection-start-line="1276" selection-start-column="31" selection-end-line="1276" selection-end-column="31" />
+        <state relative-caret-position="272">
+          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GameScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
           <folding />
         </state>
       </provider>

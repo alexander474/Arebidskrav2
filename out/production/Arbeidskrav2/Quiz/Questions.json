@@ -2,7 +2,7 @@
   {
     "countryName": "Afghanistan",
     "capital": "Kabul",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Afghanistan.png"
   },
   {
@@ -14,7 +14,7 @@
   {
     "countryName": "Algeria",
     "capital": "Algiers",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Algeria.png"
   },
   {
@@ -32,7 +32,7 @@
   {
     "countryName": "Angola",
     "capital": "Luanda",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Angola.png"
   },
   {
@@ -50,7 +50,7 @@
   {
     "countryName": "Argentina",
     "capital": "Buenos Aires",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Argentina.png"
   },
   {
@@ -68,7 +68,7 @@
   {
     "countryName": "Australia",
     "capital": "Canberra",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Australia.png"
   },
   {
@@ -86,25 +86,25 @@
   {
     "countryName": "Bahamas",
     "capital": "Nassau",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Bahamas.png"
   },
   {
     "countryName": "Bahrain",
     "capital": "Manama",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Bahrain.png"
   },
   {
     "countryName": "Bangladesh",
-    "capital": "Dhaka",
+    "capital": "Asia",
     "continent": "Europe",
     "imageFilePath": "Bangladesh.png"
   },
   {
     "countryName": "Barbados",
     "capital": "Bridgetown",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Barbados.png"
   },
   {
@@ -122,31 +122,31 @@
   {
     "countryName": "Belize",
     "capital": "Belmopan",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Belize.png"
   },
   {
     "countryName": "Benin",
     "capital": "Porto-Novo",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Benin.png"
   },
   {
     "countryName": "Bermuda",
     "capital": "Hamilton",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Bermuda.png"
   },
   {
     "countryName": "Bhutan",
     "capital": "Thimphu",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Bhutan.png"
   },
   {
     "countryName": "Bolivia",
     "capital": "Sucre",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Bolivia.png"
   },
   {
@@ -158,13 +158,13 @@
   {
     "countryName": "Botswana",
     "capital": "AGaborone",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Botswana.png"
   },
   {
     "countryName": "Brazil",
     "capital": "Brasilia",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Brazil.png"
   },
   {
@@ -176,7 +176,7 @@
   {
     "countryName": "Brunei",
     "capital": "Bandar Seri Begawan",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Brunei.png"
   },
   {
@@ -188,37 +188,37 @@
   {
     "countryName": "Burkina_Faso",
     "capital": "Ouagadougou",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Burkina_Faso.png"
   },
   {
     "countryName": "Burundi",
     "capital": "Bujumbura",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Burundi.png"
   },
   {
     "countryName": "Cambodia",
     "capital": "Phnom Penh",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Cambodia.png"
   },
   {
     "countryName": "Cameroon",
     "capital": "Yaounde",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Cameroon.png"
   },
   {
     "countryName": "Canada",
     "capital": "Ottawa",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Canada.png"
   },
   {
     "countryName": "Cape_Verde",
     "capital": "Praia",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Cape_Verde.png"
   },
   {
@@ -230,25 +230,25 @@
   {
     "countryName": "Central_African_Republic",
     "capital": "Bangui",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Central_African_Republic.png"
   },
   {
     "countryName": "Chad",
     "capital": "N'Djamena",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Chad.png"
   },
   {
     "countryName": "Chile",
     "capital": "Santiago",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Chile.png"
   },
   {
     "countryName": "China",
     "capital": "Beijing",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "China.png"
   },
   {
@@ -260,13 +260,13 @@
   {
     "countryName": "Colombia",
     "capital": "Bogotá",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Colombia.png"
   },
   {
     "countryName": "Comoros",
     "capital": "Moroni",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Comoros.png"
   },
   {
@@ -278,7 +278,7 @@
   {
     "countryName": "Costa_Rica",
     "capital": "San Jose",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Costa_Rica.png"
   },
   {
@@ -290,7 +290,7 @@
   {
     "countryName": "Cuba",
     "capital": "Havana",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Cuba.png"
   },
   {
@@ -320,7 +320,7 @@
   {
     "countryName": "Democratic_Republic_of_the_Congo",
     "capital": "Kinshasa",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Democratic_Republic_of_the_Congo.png"
   },
   {
@@ -332,49 +332,49 @@
   {
     "countryName": "Djibouti",
     "capital": "Djibouti",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Djibouti.png"
   },
   {
     "countryName": "Dominica",
     "capital": "Roseau",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Dominica.png"
   },
   {
     "countryName": "Dominican_Republic",
     "capital": "Santo Domingo",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Dominican_Republic.png"
   },
   {
     "countryName": "Ecuador",
     "capital": "Quito",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Ecuador.png"
   },
   {
     "countryName": "Egypt",
     "capital": "Cairo",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Egypt.png"
   },
   {
     "countryName": "El_Salvador",
     "capital": "San Salvador",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "El_Salvador.png"
   },
   {
     "countryName": "Equatorial_Guinea",
     "capital": "Malabo",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Equatorial_Guinea.png"
   },
   {
     "countryName": "Eritrea",
     "capital": "Asmara",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Eritrea.png"
   },
   {
@@ -386,7 +386,7 @@
   {
     "countryName": "Ethiopia",
     "capital": "Addis Ababa",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Ethiopia.png"
   },
   {
@@ -404,7 +404,7 @@
   {
     "countryName": "Fiji",
     "capital": "Suva",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Fiji.png"
   },
   {
@@ -428,13 +428,13 @@
   {
     "countryName": "Gabon",
     "capital": "Libreville",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Gabon.png"
   },
   {
     "countryName": "Gambia",
     "capital": "Banjul",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Gambia.png"
   },
   {
@@ -452,7 +452,7 @@
   {
     "countryName": "Ghana",
     "capital": "Accra",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Ghana.png"
   },
   {
@@ -476,7 +476,7 @@
   {
     "countryName": "Grenada",
     "capital": "Saint Georges",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Grenada.png"
   },
   {
@@ -488,37 +488,37 @@
   {
     "countryName": "Guatemala",
     "capital": "Guatemala City",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Guatemala.png"
   },
   {
     "countryName": "Guinea",
     "capital": "Conakry",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Guinea.png"
   },
   {
     "countryName": "Guinea_Bissau",
     "capital": "Bissau",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Guinea_Bissau.png"
   },
   {
     "countryName": "Guyana",
     "capital": "Georgetown",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Guyana.png"
   },
   {
     "countryName": "Haiti",
     "capital": "Port au Prince",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Haiti.png"
   },
   {
     "countryName": "Honduras",
     "capital": "Tegucigalpa",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Honduras.png"
   },
   {
@@ -536,7 +536,7 @@
   {
     "countryName": "India",
     "capital": "New Delhi",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "India.png"
   },
   {
@@ -548,13 +548,13 @@
   {
     "countryName": "Iran",
     "capital": "Tehran",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Iran.png"
   },
   {
     "countryName": "Iraq",
     "capital": "Baghdad",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Iraq.png"
   },
   {
@@ -566,7 +566,7 @@
   {
     "countryName": "Israel",
     "capital": "Jerusalem",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Israel.png"
   },
   {
@@ -578,55 +578,55 @@
   {
     "countryName": "Jamaica",
     "capital": "Kingston",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Jamaica.png"
   },
   {
     "countryName": "Japan",
     "capital": "Tokyo",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Japan.png"
   },
   {
     "countryName": "Jordan",
     "capital": "Amman",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Jordan.png"
   },
   {
     "countryName": "Kazakhstan",
     "capital": "Astana",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Kazakhstan.png"
   },
   {
     "countryName": "Kenya",
     "capital": "Nairobi",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Kenya.png"
   },
   {
     "countryName": "Kiribati",
     "capital": "Tarawa",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Kiribati.png"
   },
   {
     "countryName": "Kuwait",
     "capital": "Kuwait City",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Kuwait.png"
   },
   {
     "countryName": "Kyrgyzstan",
     "capital": "Bishkek",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Kyrgyzstan.png"
   },
   {
     "countryName": "Laos",
     "capital": "Vientiane",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Laos.png"
   },
   {
@@ -638,25 +638,25 @@
   {
     "countryName": "Lebanon",
     "capital": "Beirut",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Lebanon.png"
   },
   {
     "countryName": "Lesotho",
     "capital": "Maseru",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Lesotho.png"
   },
   {
     "countryName": "Liberia",
     "capital": "Monrovia",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Liberia.png"
   },
   {
     "countryName": "Libya",
     "capital": "Tripoli",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Libya.png"
   },
   {
@@ -686,31 +686,31 @@
   {
     "countryName": "Madagascar",
     "capital": "Antananarivo",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Madagascar.png"
   },
   {
     "countryName": "Malawi",
     "capital": "Lilongwe",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Malawi.png"
   },
   {
     "countryName": "Malaysia",
     "capital": "Kuala Lumpur",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Malaysia.png"
   },
   {
     "countryName": "Maldives",
     "capital": "Male",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Maldives.png"
   },
   {
     "countryName": "Mali",
     "capital": "Bamako",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Mali.png"
   },
   {
@@ -722,7 +722,7 @@
   {
     "countryName": "Marshall_Islands",
     "capital": "Majuro",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Marshall_Islands.png"
   },
   {
@@ -734,25 +734,25 @@
   {
     "countryName": "Mauritania",
     "capital": "Nouakchott",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Mauritania.png"
   },
   {
     "countryName": "Mauritius",
     "capital": "Port Louis",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Mauritius.png"
   },
   {
     "countryName": "Mexico",
     "capital": "Mexico City",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Mexico.png"
   },
   {
     "countryName": "Micronesia",
     "capital": "Palikir",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Micronesia.png"
   },
   {
@@ -770,7 +770,7 @@
   {
     "countryName": "Mongolia",
     "capital": "Ulaanbaatar",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Mongolia.png"
   },
   {
@@ -782,37 +782,37 @@
   {
     "countryName": "Morocco",
     "capital": "Rabat",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Morocco.png"
   },
   {
     "countryName": "Mozambique",
     "capital": "Maputo",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Mozambique.png"
   },
   {
     "countryName": "Myanmar",
     "capital": "Naypyidaw",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Myanmar.png"
   },
   {
     "countryName": "Namibia",
     "capital": "Windhoek",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Namibia.png"
   },
   {
     "countryName": "Nauru",
     "capital": "Yaren District",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Nauru.png"
   },
   {
     "countryName": "Nepal",
     "capital": "Kathmandu",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Nepal.png"
   },
   {
@@ -830,25 +830,25 @@
   {
     "countryName": "New_Zealand",
     "capital": "Wellington",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "New_Zealand.png"
   },
   {
     "countryName": "Nicaragua",
     "capital": "Managua",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Nicaragua.png"
   },
   {
     "countryName": "Niger",
     "capital": "Niamey",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Niger.png"
   },
   {
     "countryName": "Nigeria",
     "capital": "Abuja",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Nigeria.png"
   },
   {
@@ -866,7 +866,7 @@
   {
     "countryName": "North_Korea",
     "capital": "Pyongyang",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "North_Korea.png"
   },
   {
@@ -878,49 +878,49 @@
   {
     "countryName": "Oman",
     "capital": "Muscat",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Oman.png"
   },
   {
     "countryName": "Pakistan",
     "capital": "Islamabad",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Pakistan.png"
   },
   {
     "countryName": "Palau",
     "capital": "Ngerulmud",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Palau.png"
   },
   {
     "countryName": "Panama",
     "capital": "Panama City",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Panama.png"
   },
   {
     "countryName": "Papua_New_Guinea",
     "capital": "Port Moresby",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Papua_New_Guinea.png"
   },
   {
     "countryName": "Paraguay",
     "capital": "Asuncion",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Paraguay.png"
   },
   {
     "countryName": "Peru",
     "capital": "Lima",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Peru.png"
   },
   {
     "countryName": "Philippines",
     "capital": "Manila",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Philippines.png"
   },
   {
@@ -950,7 +950,7 @@
   {
     "countryName": "Qatar",
     "capital": "Doha",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Qatar.png"
   },
   {
@@ -974,19 +974,19 @@
   {
     "countryName": "Rwanda",
     "capital": "Kigali",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Rwanda.png"
   },
   {
     "countryName": "Saint_Kitts_and_Nevis",
     "capital": "Basseterre",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Saint_Kitts_and_Nevis.png"
   },
   {
     "countryName": "Saint_Lucia",
     "capital": "Castries",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Saint_Lucia.png"
   },
   {
@@ -998,13 +998,13 @@
   {
     "countryName": "Saint_Vicent_and_the_Grenadines",
     "capital": "Kingstown",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Saint_Vicent_and_the_Grenadines.png"
   },
   {
     "countryName": "Samoa",
     "capital": "Apia",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Samoa.png"
   },
   {
@@ -1016,19 +1016,19 @@
   {
     "countryName": "Sao_Tomé_and_Príncipe",
     "capital": "Sao Tome",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Sao_Tomé_and_Príncipe.png"
   },
   {
     "countryName": "Saudi_Arabia",
     "capital": "Riyadh",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Saudi_Arabia.png"
   },
   {
     "countryName": "Senegal",
     "capital": "Dakar",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Senegal.png"
   },
   {
@@ -1040,19 +1040,19 @@
   {
     "countryName": "Seychelles",
     "capital": "Victoria",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Seychelles.png"
   },
   {
     "countryName": "Sierra_Leone",
     "capital": "Freetown",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Sierra_Leone.png"
   },
   {
     "countryName": "Singapore",
     "capital": "Singapore",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Singapore.png"
   },
   {
@@ -1070,25 +1070,25 @@
   {
     "countryName": "Soloman_Islands",
     "capital": "Honiara",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Soloman_Islands.png"
   },
   {
     "countryName": "Somalia",
     "capital": "Mogadishu",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Somalia.png"
   },
   {
     "countryName": "South_Africa",
     "capital": "Cape Town ",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "South_Africa.png"
   },
   {
     "countryName": "South_Korea",
     "capital": "	Seoul",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "South_Korea.png"
   },
   {
@@ -1100,25 +1100,25 @@
   {
     "countryName": "Sri_Lanka",
     "capital": "Colombo",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Sri_Lanka.png"
   },
   {
     "countryName": "Sudan",
     "capital": "Khartoum",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Sudan.png"
   },
   {
     "countryName": "Suriname",
     "capital": "Paramaribo",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Suriname.png"
   },
   {
     "countryName": "Swaziland",
     "capital": "Mbabane ",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Swaziland.png"
   },
   {
@@ -1136,7 +1136,7 @@
   {
     "countryName": "Syria",
     "capital": "Damascus",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Syria.png"
   },
   {
@@ -1148,19 +1148,19 @@
   {
     "countryName": "Tajikistan",
     "capital": "Dushanbe",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Tajikistan.png"
   },
   {
     "countryName": "Tanzania",
     "capital": "Dodoma",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Tanzania.png"
   },
   {
     "countryName": "Thailand",
     "capital": "Bangkok",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Thailand.png"
   },
   {
@@ -1172,37 +1172,37 @@
   {
     "countryName": "Togo",
     "capital": "Lome",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Togo.png"
   },
   {
     "countryName": "Tonga",
     "capital": "Nuku alofa",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Tonga.png"
   },
   {
     "countryName": "Trinidad_and_Tobago",
     "capital": "Port of Spain",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "Trinidad_and_Tobago.png"
   },
   {
     "countryName": "Tunisia",
     "capital": "Tunis",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Tunisia.png"
   },
   {
     "countryName": "Turkey",
     "capital": "Ankara",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Turkey.png"
   },
   {
     "countryName": "Turkmenistan",
     "capital": "Ashgabat",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Turkmenistan.png"
   },
   {
@@ -1214,19 +1214,19 @@
   {
     "countryName": "Tuvalu",
     "capital": "Funafuti",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Tuvalu.png"
   },
   {
-    "countryName": "UAE",
+    "countryName": "UAE (United Arab Emirates)",
     "capital": "Abu Dhabi",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "UAE.png"
   },
   {
     "countryName": "Uganda",
     "capital": "Kampala",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Uganda.png"
   },
   {
@@ -1242,27 +1242,27 @@
     "imageFilePath": "United_Kingdom.png"
   },
   {
-    "countryName": "United_States_of_America",
+    "countryName": "USA (United_States_of_America)",
     "capital": "Washington",
-    "continent": "Europe",
+    "continent": "North America",
     "imageFilePath": "United_States_of_America.png"
   },
   {
     "countryName": "Uruguay",
     "capital": "Montevideo",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Uruguay.png"
   },
   {
     "countryName": "Uzbekistan",
     "capital": "Tashkent",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Uzbekistan.png"
   },
   {
     "countryName": "Vanuatu",
     "capital": "Port Vila",
-    "continent": "Europe",
+    "continent": "Oceania",
     "imageFilePath": "Vanuatu.png"
   },
   {
@@ -1274,13 +1274,13 @@
   {
     "countryName": "Venezuela",
     "capital": "Caracas",
-    "continent": "Europe",
+    "continent": "South America",
     "imageFilePath": "Venezuela.png"
   },
   {
     "countryName": "Vietnam",
     "capital": "Hanoi",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Vietnam.png"
   },
   {
@@ -1292,19 +1292,19 @@
   {
     "countryName": "Yemen",
     "capital": "Sana",
-    "continent": "Europe",
+    "continent": "Asia",
     "imageFilePath": "Yemen.png"
   },
   {
     "countryName": "Zambia",
     "capital": "Lusaka",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Zambia.png"
   },
   {
     "countryName": "Zimbabwe",
     "capital": "Harare",
-    "continent": "Europe",
+    "continent": "Africa",
     "imageFilePath": "Zimbabwe.png"
   }
 ]
