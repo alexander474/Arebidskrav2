@@ -42,15 +42,16 @@ public class MenuScene {
         /**
          * vBoxMenuButtons
          * */
-        Button AllCountries = new Button("All Countries");
-        AllCountries.setFont(new Font(20));
+        Button allCountriesBtn = new Button("All Countries");
+        allCountriesBtn.setFont(new Font(20));
 
-        vBoxMenuButtons.getChildren().add(AllCountries);
+        vBoxMenuButtons.getChildren().add(allCountriesBtn);
 
-        AllCountries.setOnAction(e->{
+        allCountriesBtn.setOnAction(e->{
             GameScene.GameWindow(mainStage);
 
         });
+
 
 
 

@@ -13,12 +13,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.io.File;
+import java.util.List;
 
 public class GameScene {
 
@@ -29,6 +27,8 @@ public class GameScene {
     static CountryHandler countryHandler = new CountryHandler();
 
     public static void GameWindow(Stage mainStage){
+        questionNumber = 0;
+        score = 0;
         BorderPane borderPane = new BorderPane();
         GridPane gridPaneTop = new GridPane();
         GridPane gridPaneTopText = new GridPane();
@@ -52,7 +52,7 @@ public class GameScene {
         borderPane.setCenter(imageView);
         borderPane.setTop(gridPaneTop);
         borderPane.setBottom(gridPaneBottom);
-        //borderPane.setPadding(new Insets(0,0,0,0));
+
 
         /**
          * gridPaneTop
@@ -166,7 +166,6 @@ public class GameScene {
             }
             else{
                 System.out.println("\n[Answer is not correct]\n");
-
             }
 
             questionNumber = questionNumber +1;
@@ -193,8 +192,9 @@ public class GameScene {
 
     }
 
-    public static void getCurrentQuestion(Label countryName, Label continentName, ImageView currentImage){
 
+    //Country currentCountry = countryHandler.getAllCountries().get(questionNumber);
+    public static void getCurrentQuestion(Label countryName, Label continentName, ImageView currentImage){
         Country currentCountry = countryHandler.getAllCountries().get(questionNumber);
 
         countryName.setText(currentCountry.getCountryName());
