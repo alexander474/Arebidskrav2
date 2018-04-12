@@ -18,17 +18,21 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.util.List;
 
-public class GameScene {
+public class CapitalGameScene {
 
     static String fileName = "";
     static Boolean answer = false;
-    static int score = 0;
-    static int questionNumber = 0;
+    static int score; //how many right answers
+    static int questionNumber; //what question your'e currently at
+    static int totalQuestions; //how many questions that exists
     static CountryHandler countryHandler = new CountryHandler();
+    static Country currentCountry;
 
-    public static void GameWindow(Stage mainStage){
-        questionNumber = 0;
-        score = 0;
+    public static void GameWindow(Stage mainStage, String gameMode){
+        score = 0; //how many right answers
+        questionNumber = 0; //what question your'e currently at
+        totalQuestions = 0; //how many questions that exists
+
         BorderPane borderPane = new BorderPane();
         GridPane gridPaneTop = new GridPane();
         GridPane gridPaneTopText = new GridPane();
@@ -37,7 +41,7 @@ public class GameScene {
         GridPane gridPaneBottom = new GridPane();
 
         //stageoptions
-        mainStage.setTitle("Quiz");
+        mainStage.setTitle("Capital Quiz");
         Scene gameScene = new Scene(borderPane, 1000,1000);
         mainStage.setScene(gameScene);
 
@@ -93,7 +97,7 @@ public class GameScene {
 
         //NumberTrackerText
         Label questionNumberText = new Label("Question: ");
-        Label currentQuestionNumberText = new Label((questionNumber+1)+" of "+countryHandler.getAllCountries().size());
+        Label currentQuestionNumberText = new Label((questionNumber+1)+" of "+totalQuestions);
         questionNumberText.setFont(new Font(30));
         questionNumberText.setPrefWidth(300);
         questionNumberText.setAlignment(Pos.CENTER);
@@ -117,9 +121,6 @@ public class GameScene {
          * ImageView
          * */
         //imageView
-        getCurrentQuestion(countryName,continentName,imageView);
-        System.out.println("src/Images/"+fileName);
-
         imageView.setFitHeight(400);
         imageView.setFitWidth(600);
 
@@ -142,47 +143,59 @@ public class GameScene {
         scoreLabel.setFont(new Font(20));
         scoreLabel.setPrefWidth(300);
         scoreLabel.setWrapText(true);
-        scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+countryHandler.getAllCountries().size());
+        scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+totalQuestions);
 
         gridPaneBottom.setAlignment(Pos.CENTER);
         gridPaneBottom.setPadding(new Insets(25,25,200,25));
         gridPaneBottom.setHgap(10);
         gridPaneBottom.setVgap(10);
 
-
         gridPaneBottom.add(answerField,0,0,2,1);
         gridPaneBottom.add(answerBTN,2,0,1,1);
         gridPaneBottom.add(scoreLabel,0,1,2,3);
 
-        //ButtonActions
+        /**
+         * Gets the first question
+         * */
+        getCurrentQuestion(countryName,continentName,imageView, gameMode);
+        currentQuestionNumberText.setText(((questionNumber+1)+" of "+totalQuestions));
+        scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+totalQuestions);
+
+        /**
+         * Running the answerbutton and checking if the answer is right or wrong and gets the next question
+         * */
         answerBTN.setOnAction(e->{
-            checkAnswer(answerField, countryName);
-            System.out.println("\n[AnswerButton pressed]");
-            System.out.println("Answer is currently ["+answer+"]");
+            checkAnswer(answerField);
+            System.out.println("-[AnswerButton pressed]-");
             if(answer){
                 score = score +1;
-                scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+countryHandler.getAllCountries().size());
-                System.out.println("[Answer is correct]\n");
+                scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+totalQuestions);
+                System.out.println("answer is: ["+answer+"]");
+                System.out.println("---------------------------------------\n");
             }
             else{
-                System.out.println("\n[Answer is not correct]\n");
+                System.out.println("answer is: ["+answer+"]");
+                System.out.println("---------------------------------------\n");
             }
 
             questionNumber = questionNumber +1;
-            if(questionNumber <= countryHandler.getAllCountries().size()-1){
-                getCurrentQuestion(countryName,continentName,imageView);
-                currentQuestionNumberText.setText(((questionNumber+1)+" of "+countryHandler.getAllCountries().size()));
+            if(questionNumber <= totalQuestions-1){
+                getCurrentQuestion(countryName,continentName,imageView, gameMode);
+                currentQuestionNumberText.setText(((questionNumber+1)+" of "+totalQuestions));
             }
             else{
                 answerBTN.setDisable(true);
-                scoreLabel.setText("Thank you for playing, you managed to get " + Integer.toString(score)+" of "+countryHandler.getAllCountries().size()+" questions right");
+                scoreLabel.setText("Thank you for playing, you managed to get " + Integer.toString(score)+" of "+totalQuestions+" questions right");
             }
             answer = false;
             answerField.setText("");
-            System.out.println("Quest num: "+questionNumber);
+            System.out.println("Quest num: "+(questionNumber+1));
         });
 
         menuBtn.setOnAction(e->{
+            score = 0; //how many right answers
+            questionNumber = 0; //what question your'e currently at
+            totalQuestions = 0; //how many questions that exists
             MenuScene.MenuWindow(mainStage);
         });
 
@@ -193,29 +206,42 @@ public class GameScene {
     }
 
 
-    //Country currentCountry = countryHandler.getAllCountries().get(questionNumber);
-    public static void getCurrentQuestion(Label countryName, Label continentName, ImageView currentImage){
-        Country currentCountry = countryHandler.getAllCountries().get(questionNumber);
-
+    public static void getQuestions(String gameMode){
+        if(gameMode.equals("AllCountries")){
+            currentCountry = countryHandler.getAllCountries().get(questionNumber);
+            totalQuestions = countryHandler.getAllCountries().size();
+        }
+        else{
+            currentCountry = countryHandler.getAllCountriesInContinent(gameMode).get(questionNumber);
+            totalQuestions = countryHandler.getAllCountriesInContinent(gameMode).size();
+        }
+    }
+    /**
+     * Gets the current question and gets the proper information for that question/country
+     * */
+    public static void getCurrentQuestion(Label countryName, Label continentName, ImageView currentImage, String gameMode){
+        getQuestions(gameMode);
         countryName.setText(currentCountry.getCountryName());
         continentName.setText("("+currentCountry.getContinent()+")");
         fileName = currentCountry.getImageFilePath();
-        System.out.println("Current country image name: "+currentCountry.getImageFilePath());
-
         File imageFilePath = new File("src/Images/"+fileName);
-        System.out.println("src/Images/"+fileName);
         currentImage.setImage(new Image(imageFilePath.toURI().toString()));
+
+        System.out.println("ImageFileName: ["+fileName+"]");
+        System.out.println("ImageFilePath: ["+imageFilePath.toURI().toString()+"]");
     }
 
-    public static Boolean checkAnswer(TextField answerField, Label countryName){
-        Country currentCountry = countryHandler.getCountry(countryName.getText().toUpperCase());
 
-        System.out.println("CountryName: "+countryName.getText().toUpperCase());
-        System.out.println("Answer: "+answerField.getText().toUpperCase());
-        System.out.println("Capital answer: "+currentCountry.getCapital().toUpperCase());
+    /**
+     * Checks the answer against the input value
+     * */
+    public static Boolean checkAnswer(TextField answerField){
+
+        System.out.println("CountryName: ["+currentCountry.getCountryName().toUpperCase()+"]");
+        System.out.println("Answer: ["+answerField.getText().toUpperCase()+"]");
+        System.out.println("Capital answer: ["+currentCountry.getCapital().toUpperCase()+"]");
 
         if(answerField.getText().toUpperCase().equals(currentCountry.getCapital().toUpperCase())){
-            System.out.println("[Setting answer to true]");
             answer = true;
         }
         return answer;
