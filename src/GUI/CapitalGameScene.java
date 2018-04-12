@@ -20,15 +20,19 @@ import java.util.List;
 
 public class CapitalGameScene {
 
-    static String fileName = "";
+    static String imageFileName = "";
     static Boolean answer = false;
     static int score; //how many right answers
     static int questionNumber; //what question your'e currently at
     static int totalQuestions; //how many questions that exists
     static CountryHandler countryHandler = new CountryHandler();
     static Country currentCountry;
+    static ImageView imageView;
 
-    public static void GameWindow(Stage mainStage, String gameMode){
+    static Label countryName;
+    static Label continentName;
+
+    public static void GameWindow(Stage mainStage, String questionCategory, String gameType){
         score = 0; //how many right answers
         questionNumber = 0; //what question your'e currently at
         totalQuestions = 0; //how many questions that exists
@@ -37,7 +41,6 @@ public class CapitalGameScene {
         GridPane gridPaneTop = new GridPane();
         GridPane gridPaneTopText = new GridPane();
         ButtonBar buttonBar = new ButtonBar();
-        ImageView imageView = new ImageView();
         GridPane gridPaneBottom = new GridPane();
 
         //stageoptions
@@ -83,14 +86,14 @@ public class CapitalGameScene {
         questionText.setAlignment(Pos.CENTER);
 
         //CountryNameDisplay
-        Label countryName = new Label("CountryName");
+        countryName = new Label("CountryName");
         countryName.setFont(new Font(30));
         countryName.setPrefWidth(300);
         countryName.setWrapText(true);
         countryName.setAlignment(Pos.CENTER);
 
         //ContinentNameDisplay
-        Label continentName = new Label("ContinentName");
+        continentName = new Label("ContinentName");
         continentName.setFont(new Font(30));
         continentName.setPrefWidth(300);
         continentName.setAlignment(Pos.CENTER);
@@ -121,6 +124,7 @@ public class CapitalGameScene {
          * ImageView
          * */
         //imageView
+        imageView = new ImageView();
         imageView.setFitHeight(400);
         imageView.setFitWidth(600);
 
@@ -157,7 +161,7 @@ public class CapitalGameScene {
         /**
          * Gets the first question
          * */
-        getCurrentQuestion(countryName,continentName,imageView, gameMode);
+        getCurrentQuestion(questionCategory, gameType);
         currentQuestionNumberText.setText(((questionNumber+1)+" of "+totalQuestions));
         scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+totalQuestions);
 
@@ -180,7 +184,7 @@ public class CapitalGameScene {
 
             questionNumber = questionNumber +1;
             if(questionNumber <= totalQuestions-1){
-                getCurrentQuestion(countryName,continentName,imageView, gameMode);
+                getCurrentQuestion(questionCategory, gameType);
                 currentQuestionNumberText.setText(((questionNumber+1)+" of "+totalQuestions));
             }
             else{
@@ -206,28 +210,29 @@ public class CapitalGameScene {
     }
 
 
-    public static void getQuestions(String gameMode){
-        if(gameMode.equals("AllCountries")){
+    public static void getQuestions(String questionCategory){
+        if(questionCategory.equals("All Countries")){
             currentCountry = countryHandler.getAllCountries().get(questionNumber);
             totalQuestions = countryHandler.getAllCountries().size();
         }
         else{
-            currentCountry = countryHandler.getAllCountriesInContinent(gameMode).get(questionNumber);
-            totalQuestions = countryHandler.getAllCountriesInContinent(gameMode).size();
+            currentCountry = countryHandler.getAllCountriesInContinent(questionCategory).get(questionNumber);
+            totalQuestions = countryHandler.getAllCountriesInContinent(questionCategory).size();
         }
     }
     /**
      * Gets the current question and gets the proper information for that question/country
      * */
-    public static void getCurrentQuestion(Label countryName, Label continentName, ImageView currentImage, String gameMode){
-        getQuestions(gameMode);
+    public static void getCurrentQuestion(String questionCategory, String gameType){
+        getQuestions(questionCategory);
         countryName.setText(currentCountry.getCountryName());
         continentName.setText("("+currentCountry.getContinent()+")");
-        fileName = currentCountry.getImageFilePath();
-        File imageFilePath = new File("src/Images/"+fileName);
-        currentImage.setImage(new Image(imageFilePath.toURI().toString()));
 
-        System.out.println("ImageFileName: ["+fileName+"]");
+        imageFileName = currentCountry.getImageFilePath();
+        File imageFilePath = new File("src/Images/"+imageFileName);
+        imageView.setImage(new Image(imageFilePath.toURI().toString()));
+
+        System.out.println("ImageFileName: ["+imageFileName+"]");
         System.out.println("ImageFilePath: ["+imageFilePath.toURI().toString()+"]");
     }
 

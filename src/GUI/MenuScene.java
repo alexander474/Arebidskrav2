@@ -16,6 +16,9 @@ import javafx.stage.Stage;
 public class MenuScene {
 
     static String radioButtonChoice;
+    final static ComboBox chooseContinent = new ComboBox();
+    final static ToggleGroup chooseGameTypeTogle = new ToggleGroup();
+
     public static void MenuWindow(Stage mainStage){
 
         radioButtonChoice = "";
@@ -54,7 +57,6 @@ public class MenuScene {
         vBoxMenu.getChildren().addAll(hboxChooseContinentAndStart,hBoxChooseGameType);
 
         //choose continent
-        final ComboBox chooseContinent = new ComboBox();
         chooseContinent.getItems().addAll(
                 "All Countries",
                 "Europe",
@@ -75,7 +77,6 @@ public class MenuScene {
 
 
         //radioButton
-        final ToggleGroup chooseGameTypeTogle = new ToggleGroup();
         chooseGameTypeTogle.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
@@ -104,69 +105,19 @@ public class MenuScene {
 
         startBtn.setOnAction(e->{
             System.out.println("[START] is pressed\n");
-            if(chooseContinent.getValue() != null && !chooseContinent.getValue().toString().isEmpty()) {
-
-                String currentCategoryChoice = chooseContinent.getValue().toString();
-                if(radioButtonChoice.equals("CapitalGame")) {
-                    switch (currentCategoryChoice) {
-                        case "All Countries":
-                            CapitalGameScene.GameWindow(mainStage, "AllCountries");
-                            break;
-                        case "Europe":
-                            CapitalGameScene.GameWindow(mainStage, "Europe");
-                            break;
-                        case "Asia":
-                            CapitalGameScene.GameWindow(mainStage, "Asia");
-                            break;
-                        case "North America":
-                            CapitalGameScene.GameWindow(mainStage, "North America");
-                            break;
-                        case "South America":
-                            CapitalGameScene.GameWindow(mainStage, "South America");
-                            break;
-                        case "Africa":
-                            CapitalGameScene.GameWindow(mainStage, "Africa");
-                            break;
-                        case "Oceania":
-                            CapitalGameScene.GameWindow(mainStage, "Oceania");
-                            break;
-
-                    }
-                }
-
-
-                if(radioButtonChoice.equals("FlagGame")){
-                    switch (currentCategoryChoice) {
-                        case "All Countries":
-                            FlagGameScene.GameWindow(mainStage, "AllCountries");
-                            break;
-                        case "Europe":
-                            FlagGameScene.GameWindow(mainStage, "Europe");
-                            break;
-                        case "Asia":
-                            FlagGameScene.GameWindow(mainStage, "Asia");
-                            break;
-                        case "North America":
-                            FlagGameScene.GameWindow(mainStage, "North America");
-                            break;
-                        case "South America":
-                            FlagGameScene.GameWindow(mainStage, "South America");
-                            break;
-                        case "Africa":
-                            FlagGameScene.GameWindow(mainStage, "Africa");
-                            break;
-                        case "Oceania":
-                            FlagGameScene.GameWindow(mainStage, "Oceania");
-                            break;
-                    }
-                }
-            }
-            else{
-                    System.out.println("[Could't start]\n");
-            }
-
+            chooceContinent(mainStage);
         });
 
         mainStage.show();
+    }
+
+    public static void chooceContinent(Stage mainStage){
+        if(chooseContinent.getValue() != null && !chooseContinent.getValue().toString().isEmpty()) {
+            String currentCategoryChoice = chooseContinent.getValue().toString();
+            CapitalGameScene.GameWindow(mainStage, currentCategoryChoice, radioButtonChoice);
+            }
+        else{
+            System.out.println("[error] couldn't choose a category or gametype");
+        }
     }
 }
