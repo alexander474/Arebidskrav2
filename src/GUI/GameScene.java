@@ -88,7 +88,7 @@ public class GameScene {
         questionText.setAlignment(Pos.CENTER);
 
         //CountryNameDisplay
-        countryName = new Label("CountryName");
+        countryName = new Label();
         countryName.setFont(new Font(30));
         countryName.setPrefWidth(300);
         countryName.setWrapText(true);
@@ -209,7 +209,9 @@ public class GameScene {
 
     }
 
-
+    /**
+     * gets the currentquestion based on which category is chosen
+     * */
     public static void getQuestions(String questionCategory){
         if(questionCategory.equals("All Countries")){
             currentCountry = countryHandler.getAllCountries().get(questionNumber);
@@ -230,11 +232,9 @@ public class GameScene {
 
         if(gameType.equals("CapitalGame")){
             countryName.setText(currentCountry.getCountryName());
-            countryName.setText(currentCountry.getCountryName());
             questionText.setText("What is the capital in?");
         }
         else if(gameType.equals("FlagGame")){
-            countryName.setText("");
             questionText.setText("Which country has this flag?");
             questionText.setFont(new Font(40));
             questionText.setPrefWidth(600);
@@ -249,7 +249,7 @@ public class GameScene {
 
 
     /**
-     * Checks the answer against the input value
+     * Checks the answer against the input value and returns true if the answer i correct
      * */
     public static Boolean checkAnswer(TextField answerField, String gameType) {
 

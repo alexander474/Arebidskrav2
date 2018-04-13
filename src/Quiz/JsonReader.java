@@ -36,7 +36,10 @@ public class JsonReader {
                 String continent = (String) jsonObject.get("continent");
                 String imageFilePath = (String) jsonObject.get("imageFilePath");
 
-                    countries.add(new Country(countryName,capital,continent,imageFilePath));
+                String fixedCountryName = removeSpecialChars(countryName);
+                String fixedCapitalName = removeSpecialChars(capital);
+
+                    countries.add(new Country(fixedCountryName,fixedCapitalName,continent,imageFilePath));
 
             }
 
@@ -46,5 +49,16 @@ public class JsonReader {
             e.printStackTrace();
         }
         return countries;
+    }
+
+    public String removeSpecialChars(String wordToChange){
+        String changedWord = "";
+        for(char c : wordToChange.toCharArray()){
+            if(c == '_'){
+                c = ' ';
+            }
+            changedWord += c;
+        }
+        return changedWord;
     }
 }
