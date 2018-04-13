@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.util.List;
 
-public class CapitalGameScene {
+public class GameScene {
 
     static String imageFileName = "";
     static Boolean answer = false;
@@ -41,6 +41,7 @@ public class CapitalGameScene {
         GridPane gridPaneTop = new GridPane();
         GridPane gridPaneTopText = new GridPane();
         ButtonBar buttonBar = new ButtonBar();
+        imageView = new ImageView();
         GridPane gridPaneBottom = new GridPane();
 
         //stageoptions
@@ -113,18 +114,27 @@ public class CapitalGameScene {
         gridPaneTopText.setHgap(50);
         gridPaneTopText.setVgap(10);
 
-
         gridPaneTopText.add(questionText,0,0,2,1);
         gridPaneTopText.add(countryName, 0,1,1,2);
         gridPaneTopText.add(questionNumberText,1,1,1,1);
         gridPaneTopText.add(currentQuestionNumberText,1,3,1,1);
         gridPaneTopText.add(continentName,0,3,1,1);
 
+        if(gameType.equals("CapitalGame")){
+            countryName.setText(currentCountry.getCountryName());
+            questionText.setText("What is the capital in?");
+        }
+        else if(gameType.equals("FlagGame")){
+            countryName.setText("");
+            questionText.setText("Which country has this flag?");
+            questionText.setFont(new Font(40));
+            questionText.setPrefWidth(600);
+        }
+
         /**
          * ImageView
          * */
         //imageView
-        imageView = new ImageView();
         imageView.setFitHeight(400);
         imageView.setFitWidth(600);
 
@@ -169,7 +179,7 @@ public class CapitalGameScene {
          * Running the answerbutton and checking if the answer is right or wrong and gets the next question
          * */
         answerBTN.setOnAction(e->{
-            checkAnswer(answerField);
+            checkAnswer(answerField, gameType);
             System.out.println("-[AnswerButton pressed]-");
             if(answer){
                 score = score +1;
@@ -225,9 +235,14 @@ public class CapitalGameScene {
      * */
     public static void getCurrentQuestion(String questionCategory, String gameType){
         getQuestions(questionCategory);
-        countryName.setText(currentCountry.getCountryName());
         continentName.setText("("+currentCountry.getContinent()+")");
 
+
+        if(gameType.equals("CapitalGame")){
+            countryName.setText(currentCountry.getCountryName());
+        }
+        else if(gameType.equals("FlagGame")){
+        }
         imageFileName = currentCountry.getImageFilePath();
         File imageFilePath = new File("src/Images/"+imageFileName);
         imageView.setImage(new Image(imageFilePath.toURI().toString()));
@@ -240,14 +255,21 @@ public class CapitalGameScene {
     /**
      * Checks the answer against the input value
      * */
-    public static Boolean checkAnswer(TextField answerField){
+    public static Boolean checkAnswer(TextField answerField, String gameType) {
 
-        System.out.println("CountryName: ["+currentCountry.getCountryName().toUpperCase()+"]");
-        System.out.println("Answer: ["+answerField.getText().toUpperCase()+"]");
-        System.out.println("Capital answer: ["+currentCountry.getCapital().toUpperCase()+"]");
+        System.out.println("CountryName: [" + currentCountry.getCountryName().toUpperCase() + "]");
+        System.out.println("Answer: [" + answerField.getText().toUpperCase() + "]");
+        System.out.println("Capital answer: [" + currentCountry.getCapital().toUpperCase() + "]");
 
-        if(answerField.getText().toUpperCase().equals(currentCountry.getCapital().toUpperCase())){
-            answer = true;
+        if (gameType.equals("CapitalGame")) {
+            if (answerField.getText().toUpperCase().equals(currentCountry.getCapital().toUpperCase())) {
+                answer = true;
+            }
+        }
+        else if (gameType.equals("FlagGame")) {
+            if (answerField.getText().toUpperCase().equals(currentCountry.getCountryName().toUpperCase())) {
+                answer = true;
+            }
         }
         return answer;
     }

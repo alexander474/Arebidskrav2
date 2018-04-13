@@ -27,6 +27,7 @@ public class MenuScene {
         VBox vBoxMenu = new VBox();
         HBox hboxChooseContinentAndStart = new HBox();
         HBox hBoxChooseGameType = new HBox();
+        GridPane gridPaneBottom = new GridPane();
 
         //stageoptions
         mainStage.setTitle("Quiz");
@@ -40,6 +41,7 @@ public class MenuScene {
          * BorderPane
          * */
         borderPane.setCenter(gridPaneCenter);
+        borderPane.setBottom(gridPaneBottom);
 
         /**
          * gridPaneCenter
@@ -49,6 +51,18 @@ public class MenuScene {
         gridPaneCenter.setHgap(10);
 
         gridPaneCenter.add(vBoxMenu,0,0,1,1);
+
+        /**
+         * gridPaneBottom
+         * */
+        Label madeByLabel = new Label("Made By: Alexander Bredesen /2018");
+        madeByLabel.setFont(new Font(15));
+        gridPaneBottom.setAlignment(Pos.BOTTOM_RIGHT);
+        gridPaneBottom.setVgap(10);
+        gridPaneBottom.setHgap(10);
+        gridPaneBottom.setPadding(new Insets(10,20,10,10));
+
+        gridPaneBottom.add(madeByLabel,0,0,1,1);
 
         /**
          * vBoxMenu
@@ -114,7 +128,7 @@ public class MenuScene {
     public static void chooceContinent(Stage mainStage){
         if(chooseContinent.getValue() != null && !chooseContinent.getValue().toString().isEmpty()) {
             String currentCategoryChoice = chooseContinent.getValue().toString();
-            CapitalGameScene.GameWindow(mainStage, currentCategoryChoice, radioButtonChoice);
+            GameScene.GameWindow(mainStage, currentCategoryChoice, radioButtonChoice);
             }
         else{
             System.out.println("[error] couldn't choose a category or gametype");
