@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 public class MenuScene {
 
     static String radioButtonChoice;
-    final static ComboBox chooseContinent = new ComboBox();
+    final static ComboBox chooseCategory = new ComboBox();
     final static ToggleGroup chooseGameTypeTogle = new ToggleGroup();
 
     public static void MenuWindow(Stage mainStage){
@@ -64,6 +64,7 @@ public class MenuScene {
 
         gridPaneBottom.add(madeByLabel,0,0,1,1);
 
+
         /**
          * vBoxMenu
          * */
@@ -71,7 +72,7 @@ public class MenuScene {
         vBoxMenu.getChildren().addAll(hboxChooseContinentAndStart,hBoxChooseGameType);
 
         //choose continent
-        chooseContinent.getItems().addAll(
+        chooseCategory.getItems().addAll(
                 "All Countries",
                 "Europe",
                 "Asia",
@@ -80,9 +81,9 @@ public class MenuScene {
                 "Africa",
                 "Oceania"
         );
-        chooseContinent.setPrefSize(250,60);
-        chooseContinent.setStyle("-fx-font-size: 20");
-        chooseContinent.setPromptText("Choose Category");
+        chooseCategory.setPrefSize(250,60);
+        chooseCategory.setStyle("-fx-font-size: 20");
+        chooseCategory.setPromptText("Choose Category");
 
         //startButton
         Button startBtn = new Button("Start");
@@ -90,17 +91,17 @@ public class MenuScene {
         startBtn.setPrefSize(100,60);
 
 
-        //radioButton
+        //radioButtonListener
         chooseGameTypeTogle.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
                 if(chooseGameTypeTogle.getSelectedToggle() != null){
                     RadioButton radioButton = (RadioButton) chooseGameTypeTogle.getSelectedToggle();
-                    System.out.println(radioButton.getText());
                     radioButtonChoice = radioButton.getText();
                 }
             }
         });
+        //RadioButtons
         RadioButton guessCapital = new RadioButton("CapitalGame");
         RadioButton guessFlag = new RadioButton("FlagGame");
         guessCapital.setToggleGroup(chooseGameTypeTogle);
@@ -108,7 +109,7 @@ public class MenuScene {
 
 
         //HBOX CONTINENT
-        hboxChooseContinentAndStart.getChildren().addAll(chooseContinent,startBtn);
+        hboxChooseContinentAndStart.getChildren().addAll(chooseCategory,startBtn);
         hboxChooseContinentAndStart.setPadding(new Insets(10));
         hboxChooseContinentAndStart.setSpacing(10);
 
@@ -126,8 +127,10 @@ public class MenuScene {
     }
 
     public static void chooceContinent(Stage mainStage){
-        if(chooseContinent.getValue() != null && !chooseContinent.getValue().toString().isEmpty()) {
-            String currentCategoryChoice = chooseContinent.getValue().toString();
+        if(chooseCategory.getValue() != null) {
+            String currentCategoryChoice = chooseCategory.getValue().toString();
+            System.out.println("Category ["+currentCategoryChoice+"]");
+            System.out.println("GameType ["+radioButtonChoice+"]\n");
             GameScene.GameWindow(mainStage, currentCategoryChoice, radioButtonChoice);
             }
         else{

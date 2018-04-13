@@ -29,6 +29,7 @@ public class GameScene {
     static Country currentCountry;
     static ImageView imageView;
 
+    static Label questionText;
     static Label countryName;
     static Label continentName;
 
@@ -81,7 +82,7 @@ public class GameScene {
          * gridPaneTopText
          * */
         //questionText
-        Label questionText = new Label("What is the capital in?");
+        questionText = new Label("QuestionText");
         questionText.setFont(new Font(50));
         questionText.setPrefWidth(600);
         questionText.setAlignment(Pos.CENTER);
@@ -119,17 +120,6 @@ public class GameScene {
         gridPaneTopText.add(questionNumberText,1,1,1,1);
         gridPaneTopText.add(currentQuestionNumberText,1,3,1,1);
         gridPaneTopText.add(continentName,0,3,1,1);
-
-        if(gameType.equals("CapitalGame")){
-            countryName.setText(currentCountry.getCountryName());
-            questionText.setText("What is the capital in?");
-        }
-        else if(gameType.equals("FlagGame")){
-            countryName.setText("");
-            questionText.setText("Which country has this flag?");
-            questionText.setFont(new Font(40));
-            questionText.setPrefWidth(600);
-        }
 
         /**
          * ImageView
@@ -240,8 +230,14 @@ public class GameScene {
 
         if(gameType.equals("CapitalGame")){
             countryName.setText(currentCountry.getCountryName());
+            countryName.setText(currentCountry.getCountryName());
+            questionText.setText("What is the capital in?");
         }
         else if(gameType.equals("FlagGame")){
+            countryName.setText("");
+            questionText.setText("Which country has this flag?");
+            questionText.setFont(new Font(40));
+            questionText.setPrefWidth(600);
         }
         imageFileName = currentCountry.getImageFilePath();
         File imageFilePath = new File("src/Images/"+imageFileName);
