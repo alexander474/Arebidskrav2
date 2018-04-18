@@ -17,6 +17,8 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import java.io.File;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class GameScene {
 
@@ -37,6 +39,7 @@ public class GameScene {
         score = 0; //how many right answers
         questionNumber = 0; //what question your'e currently at
         totalQuestions = 0; //how many questions that exists
+
 
         BorderPane borderPane = new BorderPane();
         GridPane gridPaneTop = new GridPane();
@@ -194,6 +197,7 @@ public class GameScene {
             answer = false;
             answerField.setText("");
             System.out.println("Quest num: "+(questionNumber+1));
+            scoreLabel.setText("Correct answers: "+Integer.toString(score)+" of "+totalQuestions);
         });
 
         menuBtn.setOnAction(e->{
